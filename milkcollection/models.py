@@ -6,6 +6,6 @@ from farmer.models import Farmer
 class MilkCollection(models.Model):
     farmer = models.ForeignKey(Farmer, on_delete=models.CASCADE, related_name='milk_collections')
     date = models.DateField()
-    liters = models.DecimalField(max_digits=10, decimal_places=2)
+    liters = models.DecimalField(max_digits=10, decimal_places=4)
     time = models.TimeField()
     amount_of_money = models.DecimalField(max_digits=10, decimal_places=2)
